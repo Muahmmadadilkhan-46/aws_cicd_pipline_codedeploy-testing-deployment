@@ -1,2 +1,5 @@
 #!/bin/bash
-service httpd start
+
+# Start Apache HTTP Server service
+sudo service apache2 start
+sudo service apache2 status
