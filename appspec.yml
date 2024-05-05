@@ -5,6 +5,9 @@ files:
     destination: /var/www/html/
 hooks:
   BeforeInstall:
+    - location: scripts/backup_index_html.sh   # Assuming you create a separate script for backup
+      timeout: 300
+      runas: root
     - location: scripts/install_dependencies
       timeout: 300
       runas: root
@@ -15,4 +18,3 @@ hooks:
     - location: scripts/stop_server
       timeout: 300
       runas: root
-
